@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+
+# Tooling caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+.coverage
+htmlcov/
+
+# --------------------------------------------------------------------------- #
+# Experiment outputs.
+#
+# We commit *configs* and *analysis code* but NOT raw run artifacts (they are
+# large and machine-specific). Reproducibility comes from being able to
+# regenerate them with one command, not from committing binaries.
+#
+# The one exception: canonical reference figures that a paper's README embeds
+# are committed under `papers/*/results/reference/` — see docs/experiment_framework.md.
+# --------------------------------------------------------------------------- #
+runs/
+papers/*/results/**
+!papers/*/results/reference/
+!papers/*/results/reference/**
+!papers/*/results/.gitkeep
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.swp
